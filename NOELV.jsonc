@@ -1,0 +1,143 @@
+{
+  // =====================
+  // Basic Info (required)
+  // =====================
+  "basicInfo": {
+    // Licensing
+    "licensing": "GPL-2.0, Proprietary",
+
+    // Target FPGA / ASIC
+    "targetFpgaOrAsic": "ASIC, FPGA",
+
+    // Design language
+    "designLanguage": "VHDL"
+  },
+
+  // =====================
+  // System-Level Features (optional)
+  // =====================
+  "systemLevelFeatures": {
+    // ISA
+    "isa": "RISC-V RV64/32GCH",
+
+    // Interfaces
+    "interfaces": "AHB/AXI/APB"
+  },
+
+  // =====================
+  // Architecture
+  // =====================
+  "architecture": {
+    // Type (required)
+    "type": "RISC-V",
+
+    // No. Clock Domains (in sync with system, not internally generated) (required)
+    "numClockDomains": 1,
+
+    // Control Inteface (optional)
+    "controlInterface": {
+      // ISA Extension
+      "isaExtension": "Yes",
+
+      // Memory Mapped
+      "memoryMapped": "Yes",
+
+      // Protocol
+      "protocol": "AHB"
+    },
+
+    // Memory Interface (optional)
+    "memoryInterface": {
+      // Interface Protocol
+      "interfaceProtocol": "AHB/AXI",
+
+      // Hierarchy Level
+      "hierarchyLevel": null,
+
+      // Cached?
+      "cached": "Yes",
+
+      // IOMMU?
+      "iommu": "Yes"
+    },
+
+    // Interrupts (optional)
+    "interrupts": "ACLINT, APLIC/PLIC, IMSIC"
+  },
+
+  // =====================
+  // Microarchitecture (optional)
+  // =====================
+  "microarchitecture": {
+    "parametrization": {
+      // Parametric No. of Units?
+      "parametricNumUnits": "Yes",
+
+      // Parametric Config?
+      "parametricConfig": "Yes"
+    },
+
+    "programmability": {
+      // Programmable Cores?
+      "programmableCores": "Yes",
+
+      // ISA Extension
+      "isaExtension": "RISC-V imafdch, shlcofideleg, smcdeleg, smcntrpmf, smcsrind, smdbltrp, smepmp, smpmpmt, smrnmi, smstateen, sscofpmf, sscsrind, ssdbltrp, sstc, svadu, svinval, svnapot, svpbmt, svrsw60t59b, zaamo, zalrsc, zba, zbb, zbc, zbkb, zbkc, zbkx, zbs, zca, zcb, zcd, zcmop, zicbom, zicfilp, zicfiss, zicntr, zicond, zifencei, zihpm, zimop, zkt"
+    }
+  },
+
+  // =====================
+  // Software (optional)
+  // =====================
+  "software": {
+    "compiler": {
+      // Requires specialized compiler?
+      "requiresSpecializedCompiler": "No",
+
+      // Supported compiler(s)
+      "supportedCompilers": null
+    }
+
+  },
+
+  // =====================
+  // Integration
+  // =====================
+  "integration": {
+    // ipDistribution.* (required)
+    "ipDistribution": {
+      // Manifest type
+      "manifestType": "GRLIB",
+
+      // Standalone simulation?
+      "standaloneSimulation": "Yes",
+
+      // Integration documented / examples?
+      "integrationDocsOrExamples": "Yes"
+
+    },
+
+    // synthesis.* (required)
+    "synthesis": {
+      // Is IP syntesizable?
+      "isSynthesizable": "Yes",
+
+      // FPGA synthesis examples avail?
+      "fpgaSynthesisExamples": "Yes",
+
+      // ASIC synthesis examples avail?
+      "asicSynthesisExamples": "Yes"
+    },
+
+    // simulation.* (required)
+    "simulation": {
+      // Closed-source simulation?
+      "closedSourceSimulation": "Yes",
+
+      // Open-source simulation?
+      "openSourceSimulation": "Yes"
+    }
+
+  }
+
+}
